@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 const Hero = () => {
     const videoRef = useRef();
 
+    // eslint-disable-next-line no-unused-vars
     const isMobile = useMediaQuery({
         query: "(max-width: 768px)",
     });
