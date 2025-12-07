@@ -60,9 +60,11 @@ const Hero = () => {
         tl.to(".video", { y: "100%", ease: "none" }, 0);
 
         if (videoRef.current) {
-            videoRef.current.onloadedmetadata = () => {
-                gsap.to(videoRef.current, {
-                    currentTime: videoRef.current.duration,
+            const vid = videoRef.current;
+            vid.onloadedmetadata = () => {
+                gsap.to(vid, {
+                    currentTime: vid.duration,
+
                     scrollTrigger: {
                         trigger: '#hero',
                         start: "top top",
